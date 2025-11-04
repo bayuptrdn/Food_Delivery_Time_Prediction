@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
 
 def run():
     # ===============================
@@ -28,7 +29,8 @@ def run():
     # ===============================
     st.header("📊 Dataset Overview")
 
-    df = pd.read_csv("../Food_Delivery_Times_Clean.csv")
+    file_path = os.path.join(os.path.dirname(__file__), "Food_Delivery_Times_Clean.csv")
+    df = pd.read_csv(file_path)
     st.dataframe(df.head())
     st.markdown(f"**Dataset shape:** {df.shape[0]} rows × {df.shape[1]} columns")
 
