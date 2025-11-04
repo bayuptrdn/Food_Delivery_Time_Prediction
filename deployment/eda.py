@@ -29,8 +29,8 @@ def run():
     # ===============================
     st.header("📊 Dataset Overview")
 
-    file_path = os.path.join(os.path.dirname(__file__), "Food_Delivery_Times_Clean.csv")
-    df = pd.read_csv(file_path)
+    df = pd.read_csv("Food_Delivery_Times_Clean.csv")
+
     st.dataframe(df.head())
     st.markdown(f"**Dataset shape:** {df.shape[0]} rows × {df.shape[1]} columns")
 
