@@ -1,10 +1,12 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import os
 
 @st.cache_resource
 def load_model():
-    with open("best_xgboost_delivery_time_tuned.pkl", "rb") as file:
+    model_path = os.path.join(os.path.dirname(__file__), "best_xgboost_delivery_time_tuned.pkl")
+    with open(model_path, "rb") as file:
         model = pickle.load(file)
     return model
 
