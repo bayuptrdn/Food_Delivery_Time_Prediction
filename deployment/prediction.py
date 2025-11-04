@@ -5,8 +5,13 @@ import os
 
 @st.cache_resource
 def load_model():
-    # ✅ FIX PATH MODEL
+    # gunakan path absolut agar selalu benar walau di cloud
     model_path = os.path.join(os.path.dirname(__file__), "best_xgboost_delivery_time_tuned.pkl")
+
+    if not os.path.exists(model_path):
+        st.error(f"Model file tidak ditemukan di path: {model_path}")
+        st.stop()
+
     with open(model_path, "rb") as f:
         model = pickle.load(f)
     return model
