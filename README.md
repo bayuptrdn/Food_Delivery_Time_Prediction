@@ -132,9 +132,17 @@ Insight ini dapat dimanfaatkan untuk:
 
 ---
 
-## 🌐 Deployment
-Aplikasi prediksi interaktif dikembangkan menggunakan **Streamlit**  
-dan dapat dijalankan melalui folder `deployment/`.
+## 🔗 Deployment Aplikasi
+
+Aplikasi **Food Delivery Time Prediction** telah dideploy dan dapat diakses melalui tautan berikut:
+
+🔗 **[deploymentprojectfooddelivery](https://huggingface.co/spaces/bputradana/deploygroup1)**
+
+Aplikasi ini memungkinkan pengguna untuk:
+- Melakukan prediksi waktu pengantaran makanan secara interaktif  
+- Menggunakan model machine learning terlatih secara langsung  
+- Mensimulasikan berbagai kondisi pengantaran (jarak, cuaca, lalu lintas, dll.)
+
 
 ---
 
